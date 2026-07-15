@@ -1,81 +1,52 @@
 # 🤖 HelpDesk AI
 
-A Deep Learning based Customer Support Chatbot built using **TensorFlow, Keras, Seq2Seq LSTM, NLP, Flask, HTML, CSS, and JavaScript**.
+An AI-powered HelpDesk Chatbot built using TensorFlow Seq2Seq LSTM and Flask.
 
-The chatbot is trained on a customer support conversation dataset and provides automated responses to common customer queries such as order cancellation, refunds, shipment tracking, delivery updates, password assistance, and more.
+## 📌 Project Overview
 
----
+HelpDesk AI is a customer support chatbot that generates responses to user queries using an Encoder-Decoder (Seq2Seq) LSTM neural network.
 
-# 📌 Project Overview
+The chatbot has been trained on over **26,000 customer support conversations** and can answer questions related to:
 
-HelpDesk AI is an end-to-end AI chatbot developed as an internship project.
-
-The project demonstrates the complete Natural Language Processing pipeline:
-
-- Data Collection
-- Text Preprocessing
-- Tokenization
-- Sequence Padding
-- Seq2Seq Encoder-Decoder Architecture
-- LSTM Networks
-- Model Training
-- Model Inference
-- Flask API
-- Interactive Web Interface
+- Order Cancellation
+- Refunds
+- Shipping
+- Password Reset
+- Billing
+- Account Management
+- Delivery Status
+- General Customer Support
 
 ---
 
-# 🚀 Features
+## 🚀 Features
 
-- Customer Support Chatbot
-- Deep Learning (Seq2Seq LSTM)
-- TensorFlow/Keras Model
-- Flask Backend
-- Responsive Web Interface
-- Real-time Chat
-- NLP Text Processing
-- Encoder-Decoder Architecture
-- Tokenizer Saved using Pickle
-- Model Saved in Keras Format
+- AI-based Seq2Seq Chatbot
+- TensorFlow/Keras Deep Learning Model
+- Flask Web Application
+- Modern Chat Interface
+- Tokenizer-based Text Processing
+- Encoder-Decoder LSTM Architecture
+- Model saved for inference
+- Easy deployment
 
 ---
 
-# 🛠 Tech Stack
-
-### Programming Language
+## 🛠 Tech Stack
 
 - Python
-
-### Deep Learning
-
 - TensorFlow
 - Keras
-
-### NLP
-
-- Tokenization
-- Sequence Padding
-- Text Cleaning
-
-### Backend
-
 - Flask
-
-### Frontend
-
+- NumPy
+- Pandas
 - HTML
 - CSS
 - JavaScript
 
-### Others
-
-- NumPy
-- Pandas
-- Pickle
-
 ---
 
-# 📂 Project Structure
+## 📂 Project Structure
 
 ```
 helpdesk-ai/
@@ -84,6 +55,11 @@ helpdesk-ai/
 ├── chatbot.py
 ├── requirements.txt
 ├── README.md
+│
+├── saved_models/
+│   ├── chatbot_model.keras
+│   ├── tokenizer.pkl
+│   └── history.pkl
 │
 ├── notebooks/
 │   ├── 01_data_loading.ipynb
@@ -94,15 +70,6 @@ helpdesk-ai/
 │   ├── 06_training.ipynb
 │   └── 07_chatbot_inference.ipynb
 │
-├── data/
-│   ├── raw/
-│   └── processed/
-│
-├── saved_models/
-│   ├── chatbot_model.keras
-│   ├── tokenizer.pkl
-│   └── history.pkl
-│
 ├── templates/
 │   └── index.html
 │
@@ -110,91 +77,56 @@ helpdesk-ai/
 │   ├── style.css
 │   └── script.js
 │
-└── screenshots/
+└── data/
 ```
 
 ---
 
-# 🧠 Model Architecture
+## 📊 Dataset
 
-The chatbot uses a Sequence-to-Sequence (Seq2Seq) Encoder-Decoder architecture.
+Customer Support Dataset
+
+- 26,872 conversations
+- Question-Answer pairs
+- Multiple customer service intents
+
+---
+
+## 🧠 Model Architecture
 
 Encoder
-
 - Embedding Layer
-- LSTM Layer
-
-↓
-
-Context Vector
+- LSTM (128 units)
 
 ↓
 
 Decoder
 
 - Embedding Layer
-- LSTM Layer
-- Dense Output Layer
+- LSTM (128 units)
+- Dense Softmax Layer
+
+↓
+
+Generated Response
 
 ---
 
-# 📊 Dataset
+## ⚙️ Installation
 
-Customer Support Training Dataset
-
-- Approximately 27,000 question-answer pairs
-- Customer support conversations
-- Order Management
-- Refunds
-- Password Assistance
-- Delivery Tracking
-- Billing Queries
-
----
-
-# ⚙️ Model Training
-
-Model Type
-
-- Seq2Seq Encoder-Decoder
-
-Embedding Size
-
-- 64
-
-LSTM Units
-
-- 128
-
-Epochs
-
-- 20
-
-Loss Function
-
-- Sparse Categorical Crossentropy
-
-Optimizer
-
-- Adam
-
----
-
-# 💻 Running the Project
-
-## Clone Repository
+Clone repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/helpdesk-ai.git
+git clone https://github.com/sameer-verma-07/helpdesk-ai.git
 ```
 
-## Install Requirements
+Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Run Application
+Run application
 
 ```bash
 python app.py
@@ -208,56 +140,21 @@ http://127.0.0.1:5000
 
 ---
 
-# 📸 Screenshots
+## 📷 Demo
 
-## Home Page
+Example queries:
 
-(Add Screenshot)
-
----
-
-## Chat Interface
-
-(Add Screenshot)
+- Hello
+- Cancel my order
+- Refund request
+- Forgot password
+- Track shipment
 
 ---
 
-## Model Training
+## 👨‍💻 Author
 
-(Add Screenshot)
-
----
-
-## Model Summary
-
-(Add Screenshot)
-
----
-
-# 📈 Future Improvements
-
-- Transformer-based architecture
-- Attention Mechanism
-- Beam Search Decoding
-- Better Dataset
-- Speech Recognition
-- Voice Assistant
-- Multi-language Support
-- Integration with LLMs
-
----
-
-# 👨‍💻 Author
-
-**Sameer Verma**
-
-AI & Full Stack Developer
+Sameer Verma
 
 GitHub:
 https://github.com/sameer-verma-07
-
----
-
-# ⭐ Internship Project
-
-This project was developed as part of an AI internship to demonstrate end-to-end development of a Deep Learning based Customer Support Chatbot using TensorFlow and Flask.
