@@ -154,8 +154,6 @@ Example queries:
 
 Live Demo 
 
-Live Demo
-
 https://helpdesk-ai-production-cfbe.up.railway.app
 
 ---
